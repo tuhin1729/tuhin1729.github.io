@@ -1,178 +1,365 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuhin Bose - Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #555;
-            padding: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        section {
-            padding: 30px;
-        }
-
-        h1, h2, h3 {
-            color: #333;
-        }
-
-        #name h1 {
-            color:#ffffff;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-        }
-
-        .interactive-link {
-            text-decoration: none;
-            color: #007BFF;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .interactive-link:hover {
-            color: #0056b3;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
+<x-dc>
+<helmet>
+<title>Tuhin Bose — Security Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0c0e12; color: #e8eaee; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #7fd4c1; text-decoration: none; }
+  a:hover { color: #a8e6d8; }
+  ::selection { background: rgba(127,212,193,0.25); }
+</style>
+</helmet>
 
-    <header>
-        <img src="1663392407716.jpeg" alt="Tuhin Bose" height="100%" width="5%">
-        <div id="name"><h1>Tuhin Bose</h1></div>
-        <p>Kolkata, India | +918240854169 | tuhinbose70@gmail.com</p>
-    </header>
+<div style="min-height: 100vh; background: #0c0e12;">
 
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#projects">Projects</a>
-        <a href="https://drive.google.com/drive/folders/15v9Lkz_q3Vhcy-EqHagd_p8doQihkiqL?usp=sharing" target="_blank">Resume</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <!-- NAV -->
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(12,14,18,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <a href="#top" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #e8eaee;">tuhin1729<span style="color: #7fd4c1;">_</span></a>
+    <div style="display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 500;">
+      <a href="#experience" style="color: #9aa1ad;" style-hover="color: #e8eaee;">Experience</a>
+      <a href="#recognition" style="color: #9aa1ad;" style-hover="color: #e8eaee;">Recognition</a>
+      <a href="#talks" style="color: #9aa1ad;" style-hover="color: #e8eaee;">Talks</a>
+      <a href="#skills" style="color: #9aa1ad;" style-hover="color: #e8eaee;">Skills</a>
+      <a href="#contact" style="color: #0c0e12; background: {{ accent }}; padding: 8px 18px; border-radius: 999px; font-weight: 600;" style-hover="background: #a8e6d8; color: #0c0e12;">Contact</a>
+    </div>
+  </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        Hey everyone! I am Tuhin Bose, currently pursuing my B.Tech in Computer Science & Engineering [with specialization in Cyber Security & Digital Forensics] from VIT Bhopal University.<br>
-        <br>
-        I have demonstrated excellence in Application Security, Vulnerability Assessment and Penetration Testing, wielding proficiency in Web/Android/iOS/API Security, VAPT, Python, PHP, C/C++, Linux and tools like Burpsuite, Nmap, Nikto, Metasploit etc. With this skills, I have helped more than 50 organisations to secure their assets.
-    </section>
+  <!-- HERO -->
+  <header id="top" data-screen-label="Hero" style="max-width: 1080px; margin: 0 auto; padding: 110px 48px 90px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 22px;">Cybersecurity · Penetration Testing · AppSec</div>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 72px; font-weight: 700; line-height: 1.04; margin: 0 0 28px; letter-spacing: -0.02em;">Tuhin Bose</h1>
+    <p style="font-size: 20px; line-height: 1.65; color: #b6bcc6; max-width: 640px; margin: 0 0 40px;">Security researcher with 3+ years breaking and securing web &amp; mobile applications — penetration testing, vulnerability triage, and threat investigation. Currently securing internal products at Honeywell.</p>
+    <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="#experience" style="background: {{ accent }}; color: #0c0e12; padding: 13px 26px; border-radius: 999px; font-weight: 700; font-size: 15px;" style-hover="background: #a8e6d8; color: #0c0e12;">View experience</a>
+      <a href="{{ mailtoHref }}" style="border: 1px solid rgba(255,255,255,0.16); color: #e8eaee; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 15px;" style-hover="border-color: rgba(255,255,255,0.4); color: #ffffff;">{{ email }}</a>
+    </div>
+    <div style="display: flex; gap: 56px; margin-top: 72px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08);">
+      <div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #ffffff;">40+</div>
+        <div style="font-size: 14px; color: #9aa1ad; margin-top: 4px;">Hall of Fame listings</div>
+      </div>
+      <div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #ffffff;">5</div>
+        <div style="font-size: 14px; color: #9aa1ad; margin-top: 4px;">CVEs assigned</div>
+      </div>
+      <div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #ffffff;">6</div>
+        <div style="font-size: 14px; color: #9aa1ad; margin-top: 4px;">Infosec talks</div>
+      </div>
+      <div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #ffffff;">70+</div>
+        <div style="font-size: 14px; color: #9aa1ad; margin-top: 4px;">Students trained</div>
+      </div>
+    </div>
+  </header>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
-		<p><strong>Junior Security Engineer</strong></p>
-        <p>BugBase | 06/2023 - Present</p>
-        <p>Koramangala, Bangalore</p>
-        <p>
-			<ul>
-			<li>Developing vulnerable labs for monthly CTF competition - BugTrials.</li>
-			<li>Moderating the CTF - Answering doubts & building engagements.</li>
-			<li>Conducting comprehensive penetration testing and vulnerability assessments for clients, using a combination of manual testing and automated tools to identify and prioritize security risks.</li>
-			</ul>
-		</p>
-		<br><br>
-        <p><strong>Security Engineer Intern</strong></p>
-        <p>BugBase | 11/2022 - 06/2023</p>
-        <p>
-            <ul>
-                <li>Developing vulnerable labs for monthly CTF competition - BugTrials. Moderating the CTF - Answering doubts & building engagements.</li>
-                <li>Moderating the CTF - Answering doubts & building engagements.</li>
-            </ul>
-        </p>
-    </section>
+  <!-- EXPERIENCE -->
+  <section id="experience" data-screen-label="Experience" style="max-width: 1080px; margin: 0 auto; padding: 70px 48px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 14px;">01 — Experience</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; margin: 0 0 52px; letter-spacing: -0.01em;">Where I've worked</h2>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>VIT Bhopal University</strong></p>
-        <p>Bachelor of Technology (B. Tech) | 2020-2024</p>
-        <p>
-            <ul>
-                <li>CGPA (Till 6th semester): 8.48/10</li>
-                <li>Team Lead of CVE Team, VIT Bhopal</li>
-                <li>Technical Team Lead of VIT Bhopal Cyber Warrior Club</li>
-                <li>President of OWASP VIT Bhopal University Chapter</li>
-            </ul>
-        </p>
-        <br><br>
-        <p><strong>Kalyani University Experimental High School</strong></p>
-        <p>Higher Secondary | 2019-2020</p>
-        <p>
-            <ul>
-                <li>Grade: 94.6%</li>
-            </ul>
-        </p>
-        <br><br>
-        <p><strong>Kalyani University Experimental High School</strong></p>
-        <p>Secondary | 2007-2018</p>
-        <p>
-            <ul>
-                <li>Grade: 91.29%</li>
-            </ul>
-        </p>
-    </section>
+    <div style="display: flex; flex-direction: column;">
 
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <p>
-            <ul>
-                <li>Acknowledged by Google, National Cyber Security Center (Netherlands), NCIIPC, Zoho, SeedDMS, The Cyber Agents, Achmea, Pon, SIDN, JISC, E-Goi, FlyWire, Contacts+, Napi.hu, HumHub, ImpactGuru, ISC2, Unilever, Mastercard, Dell, Pinterest, SpaceX, Underarmour, Electroneum, Indodax, Cynical Technology, OMG Nepal, Contrast Security, Department of Labor, Sasto Tickets, apnic, Bugv, STKKR, Gobugfree, Republik AG, VIT Bhopal University, BLS AG, Platform161, netplus.ch SA, placeB AG, JFrog, TouchBistro, Red Bull, Debricked, BAZG Connex, Raiffeisen, Women in Big Data, Arab Esports, Ask Mitra, Odysee, BugBase, Lenskart and many other private programs.</li>
-                <br>
-                <li>Assigned CVE-2021-26215, CVE-2021-26216, CVE-2021-35343, CVE-2021-36542, CVE-2021-36543.</li>
-                <br>
-                <li>Speaker at VIT Vellore Linux Group (Dependency Confusion), VIT Bhopal Cyber Warrior Club (Open Redirection), Damn Secure Pentesting Hub(2 Factor Authentication Bypass), CyVIT 2021 (Abusing Password Reset Functionality), BSides Toronto 2021(Account Takeover via Exploiting Misconfigured Password Reset Feature), Sardar Vallabhbhai Patel Institute of Technology (Wordpress Security)</li>
-                <br>
-                <li>Completed Certifications: Offensive Bug Bounty Hunter 2.0, Offensive Approach to Hunt Bugs, Offensive API Penetration Testing, Certified AppSec Practitioner (CAP)</li>
-            </ul>
-        </p>
-    </section>
+      <div style="display: grid; grid-template-columns: 200px 24px 1fr; gap: 0 28px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; padding-top: 4px;">06/2026 — Present</div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: {{ accent }}; box-shadow: 0 0 12px rgba(127,212,193,0.5); flex-shrink: 0; margin-top: 5px;"></div>
+          <div style="width: 1px; flex: 1; background: rgba(255,255,255,0.1);"></div>
+        </div>
+        <div style="padding-bottom: 44px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;">Cyber Security Architect / Engineer II</h3>
+          <div style="font-size: 15px; color: {{ accent }}; font-weight: 600; margin-bottom: 12px;">Honeywell · Bangalore</div>
+          <p style="font-size: 15px; line-height: 1.7; color: #b6bcc6; margin: 0;">Performing penetration testing for internal Honeywell products.</p>
+        </div>
+      </div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>
-            <ul>
-                <li><a href="https://cyber-awareness.in/" class="interactive-link">CySec AWA</a>: The "CySec AWA - Cyber Security Awareness" initiative represents a collaborative effort to heighten cyber awareness among users. Utilizing WordPress, Check-Phish API, HTML/CSS, PHP, and MYSQL. Our platform, cyber-awareness.in, acts as a comprehensive hub featuring educational blogs, informative videos, and valuable tools like a phishing website checker. This endeavor aims to equip individuals with the necessary insights and resources to fortify their online security effectively. Our platform's strength lies in its educational approach, offering blogs covering diverse cybersecurity topics and interactive quizzes to reinforce knowledge. With indispensable tools such as a phishing website detector and a data breach checker, our platform stands as a pivotal resource, striving to empower users and cultivate a safer digital environment through heightened cyber awareness.</li>
-                <br><br>
-                <li>Automated Jira Vulnerability Scanner: A Python-based vulnerability Scanner for custom Jira instances.</li>
-            </ul>
-        </p>
-    </section>
+      <div style="display: grid; grid-template-columns: 200px 24px 1fr; gap: 0 28px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; padding-top: 4px;">03/2024 — 06/2026</div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: #0c0e12; flex-shrink: 0; margin-top: 5px;"></div>
+          <div style="width: 1px; flex: 1; background: rgba(255,255,255,0.1);"></div>
+        </div>
+        <div style="padding-bottom: 44px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;">Security Researcher</h3>
+          <div style="font-size: 15px; color: {{ accent }}; font-weight: 600; margin-bottom: 12px;">CloudSEK · Bangalore</div>
+          <ul style="font-size: 15px; line-height: 1.7; color: #b6bcc6; margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px;">
+            <li>Investigated &amp; triaged security threats for clients across Digital Risk Protection and External Attack Surface Monitoring.</li>
+            <li>Executed passive reconnaissance and infrastructure threat scans on public-facing infrastructure.</li>
+            <li>Prepared detailed security reports and delivered technical walkthroughs to CISOs and security leaders.</li>
+            <li>Led end-to-end hiring CTFs — building vulnerable challenges, moderating, and reviewing writeups.</li>
+          </ul>
+        </div>
+      </div>
 
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p><strong>Email:</strong> <a href="mailto:tuhinbose70@gmail.com" class="interactive-link">tuhinbose70@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tuhin1729/" target="_blank" class="interactive-link">@tuhin1729</a></p>
-        <p><strong>Medium:</strong> <a href="https://medium.com/@tuhin1729" target="_blank" class="interactive-link">@tuhin1729</a></p>
-        <p><strong>Twitter:</strong> <a href="https://twitter.com/tuhin1729_" target="_blank" class="interactive-link">@tuhin1729_</a></p>
-    </section>
+      <div style="display: grid; grid-template-columns: 200px 24px 1fr; gap: 0 28px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; padding-top: 4px;">06/2023 — 03/2024</div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: #0c0e12; flex-shrink: 0; margin-top: 5px;"></div>
+          <div style="width: 1px; flex: 1; background: rgba(255,255,255,0.1);"></div>
+        </div>
+        <div style="padding-bottom: 44px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;">Junior Security Engineer</h3>
+          <div style="font-size: 15px; color: {{ accent }}; font-weight: 600; margin-bottom: 12px;">BugBase · Bangalore</div>
+          <ul style="font-size: 15px; line-height: 1.7; color: #b6bcc6; margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px;">
+            <li>Conducted penetration testing and vulnerability assessments for clients, combining manual testing with automated tooling.</li>
+            <li>Ran the triage process for managed bug-bounty programs — validating, rating severity, and de-duplicating reports.</li>
+            <li>Built vulnerable labs and moderated BugTrials, the monthly CTF competition.</li>
+            <li>Developed internal tooling in Python.</li>
+          </ul>
+        </div>
+      </div>
 
+      <div style="display: grid; grid-template-columns: 200px 24px 1fr; gap: 0 28px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; padding-top: 4px;">11/2022 — 06/2023</div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: #0c0e12; flex-shrink: 0; margin-top: 5px;"></div>
+          <div style="width: 1px; flex: 1; background: rgba(255,255,255,0.1);"></div>
+        </div>
+        <div style="padding-bottom: 44px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;">Security Engineer Intern</h3>
+          <div style="font-size: 15px; color: {{ accent }}; font-weight: 600; margin-bottom: 12px;">BugBase</div>
+          <p style="font-size: 15px; line-height: 1.7; color: #b6bcc6; margin: 0;">Developed vulnerable labs and moderated the monthly BugTrials CTF — answering doubts and building engagement.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 200px 24px 1fr; gap: 0 28px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; padding-top: 4px;">06/2021 — 06/2022</div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: #0c0e12; flex-shrink: 0; margin-top: 5px;"></div>
+          <div style="width: 1px; flex: 1; background: rgba(255,255,255,0.1);"></div>
+        </div>
+        <div style="padding-bottom: 44px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;">Technical Trainer</h3>
+          <div style="font-size: 15px; color: {{ accent }}; font-weight: 600; margin-bottom: 12px;">Damn Secure Pentesting Hub</div>
+          <p style="font-size: 15px; line-height: 1.7; color: #b6bcc6; margin: 0;">Trained 70+ students in bug bounty hunting; analyzed and fixed vulnerabilities reported via DSPH's vulnerability disclosure program.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 200px 24px 1fr; gap: 0 28px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; padding-top: 4px;">01/2021 — 08/2021</div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: #0c0e12; flex-shrink: 0; margin-top: 5px;"></div>
+          <div style="width: 1px; flex: 1; background: rgba(255,255,255,0.1);"></div>
+        </div>
+        <div style="padding-bottom: 44px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;">Chief Technology Officer</h3>
+          <div style="font-size: 15px; color: {{ accent }}; font-weight: 600; margin-bottom: 12px;">Virtual Cyber Labs</div>
+          <p style="font-size: 15px; line-height: 1.7; color: #b6bcc6; margin: 0;">Developed vulnerable applications for Virtual Cyber Labs students.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 200px 24px 1fr; gap: 0 28px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; padding-top: 4px;">02/2021 — 04/2021</div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: #0c0e12; flex-shrink: 0; margin-top: 5px;"></div>
+        </div>
+        <div>
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;">Cyber Security Intern</h3>
+          <div style="font-size: 15px; color: {{ accent }}; font-weight: 600; margin-bottom: 12px;">Sontse Technology</div>
+          <p style="font-size: 15px; line-height: 1.7; color: #b6bcc6; margin: 0;">Secured the company's web application by discovering &amp; reporting medium-to-critical vulnerabilities, and fixing researcher-reported issues.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section id="recognition" data-screen-label="Recognition" style="background: #10131a; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 90px 0;">
+    <div style="max-width: 1080px; margin: 0 auto; padding: 0 48px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 14px;">02 — Recognition</div>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; margin: 0 0 16px; letter-spacing: -0.01em;">Trusted by teams worldwide</h2>
+      <p style="font-size: 17px; line-height: 1.65; color: #b6bcc6; max-width: 620px; margin: 0 0 48px;">Hall of Fame listings, appreciation, and bounties from <strong style="color: #e8eaee;">40+ public programs</strong> — plus many private programs — for responsibly disclosed vulnerabilities.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Google</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">SpaceX</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Mastercard</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Dell</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Pinterest</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Unilever</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Red Bull</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Under Armour</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Zoho</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">ISC2</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">JFrog</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">NCSC Netherlands</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">NCIIPC</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">US Dept. of Labor</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Lenskart</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">BigBasket</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Raiffeisen</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">Contrast Security</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">APNIC</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">TouchBistro</span>
+        <sc-if value="{{ expanded }}" hint-placeholder-val="{{ false }}">
+          <sc-for list="{{ moreOrgs }}" as="org" hint-placeholder-count="0">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #e8eaee; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); padding: 9px 18px; border-radius: 999px;">{{ org }}</span>
+          </sc-for>
+        </sc-if>
+        <button onClick="{{ toggleExpanded }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: {{ accent }}; border: 1px dashed rgba(127,212,193,0.45); background: transparent; padding: 9px 18px; border-radius: 999px; cursor: pointer;" style-hover="background: rgba(127,212,193,0.08); border-color: rgba(127,212,193,0.7);">{{ toggleLabel }}</button>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #9aa1ad; padding: 9px 18px; font-style: italic;">&amp; many private programs</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 56px;">
+        <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 28px 30px; background: rgba(255,255,255,0.02);">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 16px;">Assigned CVEs</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #e8eaee; background: rgba(127,212,193,0.08); border: 1px solid rgba(127,212,193,0.25); padding: 6px 12px; border-radius: 6px;">CVE-2021-26215</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #e8eaee; background: rgba(127,212,193,0.08); border: 1px solid rgba(127,212,193,0.25); padding: 6px 12px; border-radius: 6px;">CVE-2021-26216</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #e8eaee; background: rgba(127,212,193,0.08); border: 1px solid rgba(127,212,193,0.25); padding: 6px 12px; border-radius: 6px;">CVE-2021-35343</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #e8eaee; background: rgba(127,212,193,0.08); border: 1px solid rgba(127,212,193,0.25); padding: 6px 12px; border-radius: 6px;">CVE-2021-36542</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #e8eaee; background: rgba(127,212,193,0.08); border: 1px solid rgba(127,212,193,0.25); padding: 6px 12px; border-radius: 6px;">CVE-2021-36543</span>
+          </div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 28px 30px; background: rgba(255,255,255,0.02);">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 16px;">Certifications</div>
+          <ul style="font-size: 15px; line-height: 1.9; color: #b6bcc6; margin: 0; padding-left: 18px;">
+            <li>Certified Red Team Professional (CRTP)</li>
+            <li>Certified AppSec Practitioner (CAP)</li>
+            <li>Offensive API Penetration Testing</li>
+            <li>Offensive Bug Bounty Hunter 2.0</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKS -->
+  <section id="talks" data-screen-label="Talks" style="max-width: 1080px; margin: 0 auto; padding: 90px 48px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 14px;">03 — Talks</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; margin: 0 0 52px; letter-spacing: -0.01em;">Speaking &amp; community</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+      <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 26px 28px;" style-hover="border-color: rgba(127,212,193,0.4);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; margin-bottom: 10px;">BSides Toronto 2021</div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4;">Account Takeover via Exploiting Misconfigured Password Reset Feature</div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 26px 28px;" style-hover="border-color: rgba(127,212,193,0.4);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; margin-bottom: 10px;">CyVIT 2021</div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4;">Abusing Password Reset Functionality</div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 26px 28px;" style-hover="border-color: rgba(127,212,193,0.4);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; margin-bottom: 10px;">VIT Vellore Linux Group</div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4;">Dependency Confusion</div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 26px 28px;" style-hover="border-color: rgba(127,212,193,0.4);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; margin-bottom: 10px;">Damn Secure Pentesting Hub</div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4;">2-Factor Authentication Bypass</div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 26px 28px;" style-hover="border-color: rgba(127,212,193,0.4);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; margin-bottom: 10px;">VIT Bhopal Cyber Warrior Club</div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4;">Open Redirection</div>
+      </div>
+      <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 26px 28px;" style-hover="border-color: rgba(127,212,193,0.4);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; margin-bottom: 10px;">SVPIT</div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4;">WordPress Security</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS + EDUCATION -->
+  <section id="skills" data-screen-label="Skills" style="background: #10131a; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 90px 0;">
+    <div style="max-width: 1080px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 14px;">04 — Skills</div>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; margin: 0 0 40px; letter-spacing: -0.01em;">Toolkit</h2>
+        <div style="display: flex; flex-direction: column; gap: 28px;">
+          <div>
+            <div style="font-size: 14px; font-weight: 700; color: #e8eaee; margin-bottom: 12px;">Security</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Web AppSec</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Android AppSec</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">iOS AppSec</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Penetration Testing</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Black Box Testing</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Vulnerability Assessment</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">OWASP Top 10</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">OSINT</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 14px; font-weight: 700; color: #e8eaee; margin-bottom: 12px;">Tools</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Burp Suite</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Metasploit</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">MobSF</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">JADX</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Linux</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 14px; font-weight: 700; color: #e8eaee; margin-bottom: 12px;">Languages</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">Python</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">PHP</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">C / C++</span>
+              <span style="font-size: 13px; color: #b6bcc6; border: 1px solid rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px;">HTML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 14px;">05 — Education</div>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; margin: 0 0 40px; letter-spacing: -0.01em;">Background</h2>
+        <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 28px 30px; background: rgba(255,255,255,0.02);">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin-bottom: 6px;">B.Tech, Computer Science</div>
+          <div style="font-size: 14px; color: {{ accent }}; font-weight: 600; margin-bottom: 4px;">Vellore Institute of Technology, Bhopal</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #9aa1ad; margin-bottom: 18px;">Cyber Security &amp; Digital Forensics · 2024</div>
+          <ul style="font-size: 14px; line-height: 1.8; color: #b6bcc6; margin: 0; padding-left: 18px;">
+            <li>President, OWASP VIT Bhopal Chapter</li>
+            <li>Team Lead, CVE Team</li>
+            <li>Technical Lead, Cyber Warrior Club</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" data-screen-label="Contact" style="max-width: 1080px; margin: 0 auto; padding: 100px 48px 80px; text-align: center;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}; margin-bottom: 18px;">Get in touch</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 52px; font-weight: 700; margin: 0 0 20px; letter-spacing: -0.02em;">Let's talk security.</h2>
+    <p style="font-size: 17px; color: #b6bcc6; margin: 0 0 36px;">Open to pentesting engagements, research collaborations, and speaking.</p>
+    <a href="{{ mailtoHref }}" style="display: inline-block; background: {{ accent }}; color: #0c0e12; padding: 15px 34px; border-radius: 999px; font-weight: 700; font-size: 16px;" style-hover="background: #a8e6d8; color: #0c0e12;">{{ email }}</a>
+    <div style="display: flex; justify-content: center; gap: 28px; margin-top: 44px; font-family: 'IBM Plex Mono', monospace; font-size: 14px;">
+      <a href="https://linkedin.com/in/tuhin1729" target="_blank" rel="noopener" style="color: #9aa1ad;" style-hover="color: #e8eaee;">LinkedIn</a>
+      <a href="https://github.com/tuhin1729" target="_blank" rel="noopener" style="color: #9aa1ad;" style-hover="color: #e8eaee;">GitHub</a>
+      <a href="https://medium.com/@tuhin1729" target="_blank" rel="noopener" style="color: #9aa1ad;" style-hover="color: #e8eaee;">Medium</a>
+      <a href="https://speakerdeck.com/tuhin1729" target="_blank" rel="noopener" style="color: #9aa1ad;" style-hover="color: #e8eaee;">Speaker Deck</a>
+    </div>
+    <div style="margin-top: 56px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: #6b7280;">Tuhin Bose · Kolkata, India · +91 82408 54169</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#8fb8f2&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#7fd4c1&quot;,&quot;#8fb8f2&quot;,&quot;#c9a86a&quot;,&quot;#a3e07a&quot;],&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  state = { expanded: false };
+  renderVals() {
+    const moreOrgs = ['SeedDMS', 'The Cyber Agents', 'Achmea', 'Pon', 'SIDN', 'JISC', 'E-Goi', 'FlyWire', 'Contacts+', 'Napi.hu', 'HumHub', 'ImpactGuru', 'Electroneum', 'Indodax', 'Cynical Technology', 'OMG Nepal', 'Sasto Tickets', 'Bugv', 'STKKR', 'Gobugfree', 'Republik AG', 'BLS AG', 'Platform161', 'netplus.ch SA', 'placeB AG', 'Debricked', 'BAZG Connex', 'Women in Big Data', 'Arab Esports', 'Ask Mitra', 'Odysee', 'SquareX', 'Locus', 'MaiCoin', 'Geizhals', 'Pyrus', 'Sprig'];
+    // Email assembled at runtime so hosting-layer obfuscators (e.g. Cloudflare's
+    // "email protected" rewrite) can't detect and mangle it in the HTML source.
+    const email = ['tuhinbose70', 'gmail.com'].join('\u0040');
+    return {
+      accent: this.props.accent ?? '#7fd4c1',
+      email,
+      mailtoHref: 'mailto:' + email,
+      expanded: this.state.expanded,
+      moreOrgs,
+      toggleExpanded: () => this.setState(s => ({ expanded: !s.expanded })),
+      toggleLabel: this.state.expanded ? '− show fewer' : '+ ' + moreOrgs.length + ' more public programs',
+    };
+  }
+}
+</script>
 </body>
 </html>
